@@ -1,0 +1,53 @@
+{
+  "demo": true,
+  "synthetic": true,
+  "case_id": "demo-60a8202d-nlrp3-saki",
+  "note": "Synthetic, self-contained demo case. Papers, DOIs (10.0000/...) and citation links are fabricated for testing only.",
+  "topic": "Backward and forward citation tracking from a seed paper on NLRP3 and septic acute kidney injury",
+  "seeds": ["10.0000/demo.c1"],
+  "papers": [
+    {
+      "title": "NLRP3 inflammasome drives septic acute kidney injury",
+      "doi": "10.0000/demo.c1",
+      "year": 2019,
+      "journal": "Kidney International",
+      "references": [
+        {"doi": "10.0000/demo.c2", "title": "Caspase-1 in tubular injury"},
+        {"title": "Inflammasome assembly mechanisms"}
+      ],
+      "cited_by": [
+        {"doi": "10.0000/demo.c4", "title": "Gasdermin D pore formation and pyroptosis"}
+      ]
+    },
+    {
+      "title": "Caspase-1 in tubular injury",
+      "doi": "10.0000/demo.c2",
+      "year": 2014,
+      "journal": "American Journal of Physiology - Renal Physiology",
+      "references": [
+        {"doi": "10.0000/demo.c3", "title": "ASC speck formation in epithelial cells"}
+      ]
+    },
+    {
+      "title": "ASC speck formation in epithelial cells",
+      "doi": "10.0000/demo.c3",
+      "year": 2011,
+      "journal": "Journal of Immunology"
+    },
+    {
+      "title": "Gasdermin D pore formation and pyroptosis",
+      "doi": "10.0000/demo.c4",
+      "year": 2021,
+      "journal": "Nature Reviews Nephrology"
+    }
+  ],
+  "output_contract": {
+    "case_id": "string",
+    "status": "string",
+    "result": "object",
+    "evidence": "array",
+    "uncertainty": "array",
+    "errors": "array",
+    "stats": "object"
+  }
+}
