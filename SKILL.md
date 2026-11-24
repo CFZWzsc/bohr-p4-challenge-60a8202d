@@ -74,6 +74,18 @@ description: Use when a research task supplies a seed paper and candidate record
 - 深度与节点数有上限（默认深度 2），更深网络需显式调整常量并承担运行时间。
 - 去重以标识符优先；同名不同文、同文不同名只能依赖标题近似，存在残余误合并风险。
 
+## Quickstart
+
+在仓库根目录 `bohrium-competition` 执行（PowerShell，实测通过）：
+
+```powershell
+python -B "tracks\literature-search\challenges\challenge-60a8202d\06_code\submission\scripts\run_skill.py" --case "tracks\literature-search\challenges\challenge-60a8202d\06_code\submission\examples\demo-case\case.json" --out "$env:TEMP\demo_60a8202d\result.json" --work "$env:TEMP\demo_60a8202d\work"
+```
+
+- 示例输入：`examples/demo-case/case.json`，合成且自包含（`"demo": true`，1 个种子论文 + 3 条引用记录，含 1 条无 DOI 的未解析引用；DOI 均为虚构的 `10.0000/...`）。
+- 实测输出：`status = "success"`、`records = 4`，`result.json` 顶层含 `case_id`、`status`、`result`、`evidence`、`uncertainty`、`errors`、`stats`；同一输入两次运行结果逐字节一致。
+- 该用例只验证脚本可执行与输出契约齐全，不代表真实引文网络。
+
 ## 最小调用示例（示例，非正式案例结果）
 
 ```bash
