@@ -5,6 +5,8 @@ description: Use when a research task supplies a seed paper and candidate record
 
 # 引文追踪与关联文献发现
 
+
+
 ## 用途与适用条件
 
 当任务围绕一篇或若干篇种子论文，要求沿参考文献（后向）、施引文献（前向）扩展文献，构建引用网络，解释"种子如何连到某篇远端文献"，合并预印本/会议版/期刊版，或找出不直接引用种子但属于同一方法脉络的平行工作时使用。
